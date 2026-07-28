@@ -14,3 +14,11 @@
  * 2. Store the participant data in a single collection.
  * 3. Display the participant data using console.log.
  */
+
+const participant: { studentId: string; Name: string; Age: number; paid: String }[] = [
+  { studentId: `ST001`, Name: "Ahmad Fauzi", Age: 16, paid: `Yes`},
+  { studentId: `ST002`, Name: "Siti Nurhaliza", Age: 17, paid: `No`},
+  { studentId: `ST003`, Name: "Budi Santoso ", Age: 16, paid: `Yes`},
+  
+];
+console.log(participant)
