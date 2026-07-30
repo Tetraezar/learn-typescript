@@ -51,7 +51,7 @@ const subtotal = (mechKeyboardPrice * mechKeyboardQTY) + (wirelessMousePrice * w
 const totalaftrVCR = subtotal - (subtotal * discount) - voucherValue
 const tax: number = totalaftrVCR * 0.11
 const reward: number = totalaftrVCR / RewardPointRate
-const eligibility = premMember == `yes` || totalaftrVCR + tax > 1500000 ? `yes` : `no`
+const eligibility = premMember == `yes` || totalaftrVCR > 1500000 ? `yes` : `no`
 
 console.log(`Product Subtotal: ${subtotal}`)
 console.log(`Membership discount: ${subtotal * discount}`)
