@@ -14,3 +14,10 @@
  *  - Final payment
  * 2. Display the calculation results.
  */
+const riceMeals: number = 18000;
+const mineralBottle: number = 5000;
+const discount: number = 10000;
+console.log(`Total food price: ${riceMeals * 3}`)
+console.log(`Total drink price: ${mineralBottle * 2}`)
+console.log(`Grand total: ${riceMeals * 3 + mineralBottle * 2}`)
+console.log(`Final payment: ${riceMeals * 3 + mineralBottle * 2 - discount}`)

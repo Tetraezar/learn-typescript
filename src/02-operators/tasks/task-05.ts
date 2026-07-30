@@ -33,3 +33,18 @@
  * - Calculate the remaining scholarship budget.
  * - Display whether the student is accepted.
  */
+const name: string = `Alya Putri`
+const gpa: number = 3.89;
+const familyIncome: number = 4200000;
+const CompetitionCount: number = 4;
+const disciplinaryRecord: boolean = false;
+const documentComplete: boolean = true;
+
+const isacc = gpa >= 3.75 && familyIncome < 5000000 && 
+CompetitionCount >= 3 && disciplinaryRecord == false && documentComplete == true? `yes` : `no`;
+
+const schoolBudget: number = 500000000;
+const budgetScholar = isacc == `yes` ? 12000000 : 0;
+console.log(`Is the student accepted: ${isacc}`)
+console.log(`Scholarship Amount: ${budgetScholar}`)
+console.log(`Remaining school budget: ${schoolBudget - budgetScholar}`)

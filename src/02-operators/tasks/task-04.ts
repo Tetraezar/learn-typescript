@@ -22,3 +22,19 @@
  *  - Calculate the final payment.
 
  */
+
+
+const mechKeyboard: number = 850000;
+const mechKeyboardQTY: number = 1;
+const wirelessMouse: number = 275000;
+const wirelessMouseQTY: number = 2;
+const mousePad: number = 120000;
+const mousePadQTY: number = 1;
+const subtotal: number = (mechKeyboard * mechKeyboardQTY) + (mousePad * mousePadQTY) + (wirelessMouse * wirelessMouseQTY);
+const isDiscount = subtotal > 1000000 ? `yes` : `no`;
+const Discount = subtotal > 1000000 ? 0.1 : 1;
+
+console.log(`Subtotal: ${subtotal}`)
+console.log(`Total purchased item: ${mechKeyboardQTY + wirelessMouseQTY + mousePadQTY}`)
+console.log(`Get discount?: ${isDiscount}`)
+console.log(`Final payment: ${subtotal - (subtotal * Discount)}`)

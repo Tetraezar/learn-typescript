@@ -17,3 +17,10 @@
  * - Bonus
  * - Final salary
  */
+const overtime: number = 12;
+const basicSalary: number = 5000000;
+const overtimePay = overtime * 50000;
+const bonus = overtime > 10 ? 300000 : 0;
+console.log(`Overtime pay: ${overtimePay}`)
+console.log(`Bonus: ${bonus}`)
+console.log(`Final salary: ${basicSalary + overtimePay + bonus}`)

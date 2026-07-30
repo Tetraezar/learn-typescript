@@ -13,3 +13,15 @@
  * - Discount amount
  * - Final payment
  */
+
+const charges: number = 8000;
+const hour: number = 7;
+const minute: number = 35;
+const isDiscount = hour > 5 ? 0.15 : 1;
+const Discount = (hour * charges) * isDiscount;
+
+console.log(`Total playing time: ${hour * 60 + minute} minutes`)
+console.log(`Remaining minutes after full hours: ${60 - minute} `)
+console.log(`Total payment before discount: ${hour * charges}`)
+console.log(`discount amount: ${(hour * charges) * isDiscount}`)
+console.log(`Final payment: ${(hour * charges) - Discount}`)

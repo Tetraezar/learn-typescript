@@ -14,3 +14,12 @@
  * Task: Store and display the result in a variable named "isEligible"
 
  */
+const finalScore: number = 82;
+const attendance: number = 94;
+const tuitionPaid: boolean = true;
+
+const isEligible: boolean = finalScore >= 75 && attendance >= 90 && tuitionPaid == true;
+const lulus = isEligible ? `Selamat anda lulus ez bgt sekolah info loker bos` : `maaf anda gagal ngulang lagi aja tahun depan bos gitu aja gabisa dek`
+
+console.log(`Is the student eligible? ${isEligible}`)
+console.log(`lulus ga hayoooo ${lulus}`)
