@@ -30,3 +30,20 @@
  * 2. Implement both screening stages.
  * 3. Display the loan decision.
  */
+
+const applicant: string = `Andi Wijaya`
+const MonthlyIncome: number = 10000000
+const CreditScore: number = 725
+const ExistingDebt: number = 2500000
+const PermanentEmployee: boolean = true
+
+if (MonthlyIncome >= 8000000 && CreditScore >= 700) {
+    const firstScreening: string = `passed`
+    if (ExistingDebt < 0.3 * MonthlyIncome && PermanentEmployee) {
+        console.log(`${applicant} Loan Approved`)
+    } else {
+        console.log(`${applicant} Manual Review`)
+    }
+} else {
+    console.log(`${applicant} Loan Rejected`)
+}
