@@ -1,5 +1,5 @@
 /**
- * An LMS stores assignment submission information on array below.
+ * An LMS stores assignment submission information on submissions below.
  * Business Rules
  * - Students who do not submit automatically receive a score of 0.
  * - A passing score is 75.
@@ -25,3 +25,35 @@ const submissions = [
     { student: "Gita", submitted: true, score: 90 },
     { student: "Hana", submitted: true, score: 73 }
 ];
+
+let submit: number = 0
+let notSubmit: number = 0
+let passed: number = 0
+let revise: number = 0
+let totalscore: number = 0
+
+for (let i = 0; i < submissions.length; i++) {
+    if (submissions[i].submitted) {
+        submit++
+    } else{
+        console.log(`Student who did not submit ${submissions[i].student}`)
+        notSubmit++
+    }
+
+    if (submissions[i].score >= 75) {
+        passed++
+    } else {
+        console.log(`Student who must revise ${submissions[i].student}`)
+        revise++
+    }
+    totalscore += submissions[i].score
+
+}
+
+const averageScore: number = totalscore / submissions.length
+
+console.log(`students who submitted their assignment: ${submit}`)
+console.log(`students who did not submitted their assignment: ${notSubmit}`)
+console.log(`students who passed: ${passed}`)
+console.log(`students who must revise: ${revise}`)
+console.log(`class average score: ${averageScore}`)
