@@ -24,19 +24,20 @@
  */
 
 const customerName: string = `Nadia Putri`
-const PremiumMember: string = `yes`
-const roomAvailable: boolean = false
+const PremiumMember: string = `Premium`
+const roomAvailable: boolean = true
 
 if (roomAvailable) {
-    const isPremium = PremiumMember ? true : false
-    if (PremiumMember) {
-        console.log(`${customerName} receive a free room upgrade`)
-    } else {
+    if (PremiumMember == `VVIP`) {
+        console.log(`${customerName} receive a free room upgrade and free breakfast`)
+    } else if(PremiumMember == `Premium`){
+        console.log(`${customerName} receive a free room upgrade only`)
+    }else {
         console.log(`${customerName} receive the reserved room only`)
     }
 } else {
-    const isPremium = PremiumMember ? true : false
-    if (PremiumMember) {
+
+    if (PremiumMember == `VVIP`) {
         console.log(`${customerName} are placed on the priority waiting list`)
     } else {
         console.log(`${customerName} are informed that no rooms are available`)

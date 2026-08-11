@@ -38,7 +38,6 @@ const ExistingDebt: number = 2500000
 const PermanentEmployee: boolean = true
 
 if (MonthlyIncome >= 8000000 && CreditScore >= 700) {
-    const firstScreening: string = `passed`
     if (ExistingDebt < 0.3 * MonthlyIncome && PermanentEmployee) {
         console.log(`${applicant} Loan Approved`)
     } else {

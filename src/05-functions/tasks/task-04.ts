@@ -13,6 +13,7 @@
  * - Display the report inside the function.
  * - The function should not return any value.
  */
+type Student = {name: string, present:boolean}
 const attendances = [
     { name: "Alya", present: true },
     { name: "Budi", present: false },
@@ -20,3 +21,21 @@ const attendances = [
     { name: "Dimas", present: true },
     { name: "Eka", present: false }
 ];
+
+
+function printAttendanceReport (arr: Student[]) {
+    let totalPresent = 0
+    let totalAbsent = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].present) {
+            totalPresent++
+        } else {
+            totalAbsent++
+            console.log(`Names of absent students ${arr[i].name}`)
+        }
+    }
+    console.log(`Total Present: ${totalPresent}`)
+    console.log(`Total Absent: ${totalAbsent}`)
+}
+
+printAttendanceReport(attendances)

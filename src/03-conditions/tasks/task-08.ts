@@ -32,9 +32,10 @@ const Passenger: string = `Fajar Nugroho`
 const OnlineCheckIn: boolean = true
 const CabinClass: string = `Economy`
 const BaggageWeight: number = 24
+let checkOnline: String = ``
 
 if (OnlineCheckIn) {
-    const checkOnline: string = `done`
+    checkOnline = `done`
     if (checkOnline == `done` && BaggageWeight < 20) {
         console.log(`${Passenger} Proceed to boarding pass printing`)
     } else {

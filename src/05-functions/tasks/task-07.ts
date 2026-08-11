@@ -1,5 +1,5 @@
 /**
- * A university stores enrollment information at following array
+ * A university stores enrollment information at following student
  * The university needs a report containing:
  * - Total students
  * - Active students
@@ -11,6 +11,7 @@
  * Complete following functions!
  */
 
+type studentInfo = {name: string, major: string, active: boolean}
 const students = [
   {
     name: "Alya",
@@ -39,18 +40,44 @@ const students = [
   }
 ];
 
-function countActiveStudents(...){
+let activeStudents = 0
+let inactiveStudents = 0
 
+function countActiveStudents(students: studentInfo[]): number{
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].active) {
+      activeStudents++
+    }
+  }
+  return activeStudents
 }
 
-function countInactiveStudents(...){
-
+function countInactiveStudents(students: studentInfo[]): number{
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].active == false) {
+      inactiveStudents++
+    }
+  }
+  return inactiveStudents
 }
 
-function countStudentsByMajor(...){
-
+function countStudentsByMajor(students: studentInfo[], major: string): number{
+  let Major:number = 0
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].major == major) {
+      Major++
+    }
+  }
+  return Major
 }
 
-function printEnrollmentReport(...){
-    
+function printEnrollmentReport(Students: studentInfo[]){
+  console.log(`Total Students: ${students.length}`)
+  console.log(`Active Students: `, countActiveStudents(students))
+  console.log(`Inactive Students: `, countInactiveStudents(students))
+  console.log(`Software Engineering Students: `, countStudentsByMajor(students, `Software Engineering`))
+  console.log(`Multimedia Students: `, countStudentsByMajor(students, `Multimedia`))
+  console.log(`Networking Students: `, countStudentsByMajor(students, `Networking`))
 }
+
+printEnrollmentReport(students)
