@@ -30,13 +30,9 @@ const students = [
 const StudentsName = students.map(students => students.name)
 const StudentPassed = students.filter(students => students.score >= 70)
 const citra = students.find(student => student.name === "Citra");
-let total: number = 0
-for (let i = 0; i < students.length; i++) {
-  total += students[i].score
-}
-const AVGscore = total / students.length
+const total = students.reduce((total, students) => total + students.score, 0)
 
 console.log(StudentsName)
 console.log(StudentPassed)
 console.log(`Student name Citra:`, citra);
-console.log(AVGscore)
+console.log(`Average: `, total / students.length)
