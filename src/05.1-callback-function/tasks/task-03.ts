@@ -45,6 +45,11 @@ function ExpensiveProduct(product: product) {
         console.log(product.name, "-", product.price);
     }
 }
+function cheapProduct(product: product) {
+    if (product.price < 500000) {
+        console.log(product.name, `-`, product.price)
+    }
+}
 
 function DiscountProduct(product: product) {
     if (product.price > 500000) {
@@ -60,3 +65,6 @@ processProduct(products, ExpensiveProduct);
 
 console.log("Produk dengan diskon 10%:");
 processProduct(products, DiscountProduct);
+
+console.log("Produk murah bgt loh ya:");
+processProduct(products, cheapProduct);
